@@ -85,11 +85,11 @@ sb2js = function(url, canvas, properties) {
 		keyDownArray[i] = false;
 	}
 
-	document.onkeydown=keyDown;
-	document.onkeypress=keyPress;
-	document.onkeyup=keyUp;
+	document.getElementById("scratch").onkeydown=keyDown;
+	document.getElementById("scratch").onkeypress=keyPress;
+	document.getElementById("scratch").onkeyup=keyUp;
 
-	parent.window.onmousedown = function(evt) {
+	document.getElementById("scratch").onmousedown = function(evt) {
 		if (!scratchMouseDown) focus = 0;
 	};
 
@@ -118,9 +118,9 @@ sb2js = function(url, canvas, properties) {
 	framecanvas.ontouchstart = touchDown;
 	framecanvas.ontouchmove = touchMove;
 
-	document.onmouseup = mouseUp;
+	document.getElementById("scratch").onmouseup = mouseUp;
 
-	document.ontouchend = touchUp;
+	document.getElementById("scratch").ontouchend = touchUp;
 	framecanvas.onmousemove = getMousePosition;
 
 	// Start Player Images
